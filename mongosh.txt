@@ -1,0 +1,47 @@
+# Connect to local MongoDB
+mongosh
+
+# Show all databases
+show databases
+
+# Use the orthomolecular_rag database
+use orthomolecular_rag
+
+# Show all collections
+show collections
+
+# Count documents
+db.documents.countDocuments()
+
+# View first 5 documents
+db.documents.find().limit(5)
+
+# View document by ID
+db.documents.findOne({_id: 10})
+
+# Search by text
+db.documents.find({text: /vitamin/i}).limit(5)
+
+# Search by source
+db.documents.find({source: "the-gerson-therapy"}).limit(5)
+
+# Pretty print
+db.documents.find().limit(1).pretty()
+
+# Get document count
+db.documents.countDocuments()
+
+# View document structure
+db.documents.findOne()
+
+# Check embedding dimension
+db.documents.findOne().embedding.length
+
+# Delete document
+db.documents.deleteOne({_id: 10})
+
+# Delete all documents
+db.documents.deleteMany({})
+
+# Exit
+exit
