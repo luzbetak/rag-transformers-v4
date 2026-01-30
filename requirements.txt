@@ -2,7 +2,7 @@
 # Install order matters - torch must come FIRST!
 
 # Core dependencies (INSTALL FIRST)
-torch==2.1.0
+torch==2.8.0
 numpy==1.24.3
 
 # Transformers and embeddings
